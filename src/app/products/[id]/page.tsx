@@ -10,7 +10,13 @@ import AllReviw from "@/app/components/allreviews";
 import Tshirts from "@/app/components/product";
 import { BreadcrumbDemo } from "@/app/components/breadcrupm";
 
-let star = [<FaStar key={1} />, <FaStar key={2} />, <FaStar key={3} />, <FaStar key={4} />, <FaStar key={5} />];
+let star = [
+  <FaStar key={1} />,
+  <FaStar key={2} />,
+  <FaStar key={3} />,
+  <FaStar key={4} />,
+  <FaStar key={5} />
+];
 
 interface Iproducts {
   title: string;
@@ -87,31 +93,31 @@ export default function Pro_Detail() {
             alt="productdetail"
             width={100}
             height={100}
-          ></Image>
+          />
           <Image
             src={item.img2}
             className="w-[100px] sm:w-full h-[100px] sm:h-[150px] sm:mt-3"
             alt="productdetail"
             width={100}
             height={100}
-          ></Image>
+          />
           <Image
             src={item.img3}
             className="w-[100px] sm:w-full h-[100px] sm:h-[150px] sm:mt-3"
             alt="productdetail"
             width={100}
             height={100}
-          ></Image>
+          />
         </div>
         {/*mid div */}
-        <div className="w-full sm:w-[444px]  h-[260px] sm:h-[500px] mt-5 sm:mt-0 order-1 sm:order-2">
+        <div className="w-full sm:w-[444px] h-[260px] sm:h-[500px] mt-5 sm:mt-0 order-1 sm:order-2">
           <Image
             src={item.img3}
             alt="productdetail"
             className="w-full h-[95%]"
             width={200}
             height={100}
-          ></Image>
+          />
         </div>
         {/*right div */}
         <div className="w-full sm:w-[600px] h-[500px] mt-3 order-3">
@@ -131,15 +137,14 @@ export default function Pro_Detail() {
           <div className="mt-5">
             <p className="text-gray-500">Select Colors</p>
             <div className="flex space-x-3 mt-2">
-              <div className="w-[37px] h-[37px] bg-[#4F4631] rounded-full relative flex justify-center items-center">
-                <Check className="text-white opacity-0 hover:opacity-100 cursor-pointer" />
-              </div>
-              <div className="w-[37px] h-[37px] bg-[#314F4A] rounded-full relative flex justify-center items-center">
-                <Check className="text-white opacity-0 hover:opacity-100 cursor-pointer" />
-              </div>
-              <div className="w-[37px] h-[37px] bg-[#31344F] rounded-full relative flex justify-center items-center">
-                <Check className="text-white opacity-0 hover:opacity-100 cursor-pointer" />
-              </div>
+              {["#4F4631", "#314F4A", "#31344F"].map((color, index) => (
+                <div
+                  key={index}
+                  className={`w-[37px] h-[37px] bg-[${color}] rounded-full relative flex justify-center items-center`}
+                >
+                  <Check className="text-white opacity-0 hover:opacity-100 cursor-pointer" />
+                </div>
+              ))}
             </div>
           </div>
           {/* choose size */}

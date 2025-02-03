@@ -11,7 +11,7 @@ export function AccordionDemo() {
     <div className="p-5">
       <div className="flex justify-between items-center">
         <h1 className="font-bold">Filter</h1>
-        <Filter/>
+        <Filter />
       </div>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
@@ -23,8 +23,7 @@ export function AccordionDemo() {
         <AccordionItem value="item-2">
           <AccordionTrigger>Is it styled?</AccordionTrigger>
           <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
+            Yes. It comes with default styles that match the other components&apos; aesthetic.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">

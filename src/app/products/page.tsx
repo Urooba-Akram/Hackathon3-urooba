@@ -65,7 +65,7 @@ export default function Products() {
               {/* Star Rating */}
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, index) => (
-                  <span key={index}>
+                  <span key={index}> {/* Add key here */}
                     <FaStar />
                   </span>
                 ))}
