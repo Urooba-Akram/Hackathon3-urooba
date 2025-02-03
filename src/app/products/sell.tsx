@@ -52,8 +52,8 @@ export default function TopSell() {
                   src={data.img_url}
                   alt={data.title}
                   className="w-full h-full rounded-[20px]"
-                  width={100}
-                  height={100}
+                  width={230}
+                  height={230}
                 />
               </div>
             </Link>
@@ -62,7 +62,7 @@ export default function TopSell() {
               {/* Star Rating Fix */}
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, index) => (
-                  <span key={index}>
+                  <span key={`star-${data.id}-${index}`}>
                     <FaStar />
                   </span>
                 ))}
