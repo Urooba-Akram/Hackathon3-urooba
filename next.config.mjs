@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ['cdn.sanity.io'], // Sanity domain ko add kiya
   },
   experimental: {
-    optimizeFonts: false, // Font optimization ko disable kiya
+    optimizeCss: true, // ✅ Ye sahi hai
   },
 };
 

@@ -50,15 +50,14 @@ export function NavigationMenuDemo() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
-                <Link href={""}>
+                <Link href={""} key={component.title}>
                 <ListItem
-                  key={component.title}
                   title={component.title}
                   href={"/casual"}
                 >
                   {component.description}
                 </ListItem>
-                </Link>
+              </Link>
               ))}
             </ul>
           </NavigationMenuContent>

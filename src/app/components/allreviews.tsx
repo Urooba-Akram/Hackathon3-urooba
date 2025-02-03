@@ -68,8 +68,8 @@ export default function AllReviw(){
              <div className="px-5 flex justify-between">
              <h1 className="text-2xl">All Reviws</h1>
                <div className="space-x-3">
-               <Button variant={"outline"} className="hidden md:block">Latest</Button>
-               <Button>Write Now Review</Button>
+               <Button variant="outline" className="hidden md:block">Latest</Button>
+                       <Button variant="default">Write Now Review</Button>
                </div>
              </div>
              {/* container */}
